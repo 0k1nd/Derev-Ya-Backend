@@ -11,6 +11,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "KFSSfd9sdfSDF09fs0afdF")
 DEBUG = bool(os.getenv("DJANGO_DEBUG", "False"))
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "localhost").split(",")
+CSRF_TRUSTED_ORIGINS = [
+    'https://tspk-practice.altorus.ru'
+]
 
 # Application definition
 
