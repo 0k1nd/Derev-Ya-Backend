@@ -1,5 +1,4 @@
 import os
-from datetime import timedelta
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,6 +28,8 @@ INSTALLED_APPS = [
     "django_filters",
     "drf_spectacular",
     "drf_spectacular_sidecar",
+
+    "apps.main",
 ]
 
 MIDDLEWARE = [
@@ -65,7 +66,7 @@ WSGI_APPLICATION = '_project.wsgi.application'
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql", 
+        "ENGINE": "django.db.backends.postgresql",
         "NAME": os.getenv("POSTGRES_NAME", "postgres"),
         "USER": os.getenv("POSTGRES_USER", "postgres"),
         "PASSWORD": os.getenv("POSTGRES_PASSWORD"),
